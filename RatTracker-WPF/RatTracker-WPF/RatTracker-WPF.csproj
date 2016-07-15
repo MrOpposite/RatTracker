@@ -179,8 +179,14 @@
     <Compile Include="Converter\BooleanToColourConverter.cs" />
     <Compile Include="Converter\EmptyStringToVisibilityConverter.cs" />
     <Compile Include="Converter\RequestStateToColourConverter.cs" />
+    <Compile Include="DispatchInterface\Components\LabelWithValue.xaml.cs">
+      <DependentUpon>LabelWithValue.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DispatchInterface\Components\Rescues.xaml.cs">
       <DependentUpon>Rescues.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DispatchInterface\Components\RescueItem.xaml.cs">
+      <DependentUpon>RescueItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="DispatchInterface\DispatchMain.xaml.cs">
       <DependentUpon>DispatchMain.xaml</DependentUpon>
@@ -188,6 +194,7 @@
     <Compile Include="DispatchInterface\DispatchStatus.xaml.cs">
       <DependentUpon>DispatchStatus.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DispatchInterface\Models\RescueListItemModel.cs" />
     <Compile Include="EDDBData.cs" />
     <Compile Include="ErrorReporter.xaml.cs">
       <DependentUpon>ErrorReporter.xaml</DependentUpon>
@@ -236,7 +243,15 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Page Include="DispatchInterface\Components\LabelWithValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DispatchInterface\Components\Rescues.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DispatchInterface\Components\RescueItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

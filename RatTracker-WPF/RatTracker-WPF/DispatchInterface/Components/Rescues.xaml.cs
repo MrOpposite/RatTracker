@@ -23,6 +23,12 @@ namespace RatTracker_WPF.DispatchInterface.Components
         public Rescues()
         {
             InitializeComponent();
-        }
+			RescueItem _rescueItem = new RescueItem();
+			_rescueItem.Client = "teeest";
+			RescueList.Children.Add(_rescueItem);
+			_rescueItem = new RescueItem();
+			_rescueItem.Client = "taaast";
+			RescueList.Children.Add(_rescueItem);
+		}
     }
 }
