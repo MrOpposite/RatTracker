@@ -71,9 +71,9 @@ namespace RatTracker_WPF
 		Datum myrescue; // TODO: See myClient - must be refactored.
 		private ICollection<TravelLog> myTravelLog; // Log of recently visited systems.
 		private Overlay overlay; // Pointer to UI overlay
-        private DispatchInterface.DispatchMain dispatchInterface;
+		private DispatchInterface.DispatchMain dispatchInterface;
 
-        RootObject rescues; // Current rescues. Source for items in rescues datagrid
+		RootObject rescues; // Current rescues. Source for items in rescues datagrid
 		private string scState; // Supercruise state.
 		public bool stopNetLog; // Used to terminate netlog reader thread.
 		private TelemetryClient tc = new TelemetryClient(); 
@@ -192,7 +192,7 @@ namespace RatTracker_WPF
 		}
 		private async void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			//DoInitialize();
+			DoInitialize();
 		}
 		public void DoInitialize()
 		{
@@ -1764,17 +1764,17 @@ namespace RatTracker_WPF
 		}
 		private void DispatchMenu_Click(object sender, RoutedEventArgs e)
 		{
-            //open the dispatch interface
-            if (dispatchInterface == null || !dispatchInterface.IsLoaded)
-            {
-                dispatchInterface = new DispatchInterface.DispatchMain();
-                dispatchInterface.Show();
-            } else {
-                if (dispatchInterface.WindowState != WindowState.Minimized)
-                    dispatchInterface.Close();
-                else
-                    dispatchInterface.WindowState = WindowState.Normal;
-            }
+			//open the dispatch interface
+			if (dispatchInterface == null || !dispatchInterface.IsLoaded)
+			{
+				dispatchInterface = new DispatchInterface.DispatchMain();
+				dispatchInterface.Show();
+			} else {
+				if (dispatchInterface.WindowState != WindowState.Minimized)
+					dispatchInterface.Close();
+				else
+					dispatchInterface.WindowState = WindowState.Normal;
+			}
 		}
 
 		private void OverlayMenu_Click(object sender, RoutedEventArgs e)

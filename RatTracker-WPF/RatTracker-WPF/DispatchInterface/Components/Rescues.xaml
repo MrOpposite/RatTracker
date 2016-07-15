@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:RatTracker_WPF.DispatchInterface.Components"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,10">
-            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="500"/>
-        </ScrollViewer>
-    </Grid>
+	<Grid>
+		<ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,10">
+			<Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="500"/>
+		</ScrollViewer>
+	</Grid>
 </UserControl>
