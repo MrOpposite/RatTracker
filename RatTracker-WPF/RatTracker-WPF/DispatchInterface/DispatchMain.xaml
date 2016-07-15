@@ -4,18 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RatTracker_WPF.DispatchInterface"
+        xmlns:comp="clr-namespace:RatTracker_WPF.DispatchInterface.Components"
         x:Class="RatTracker_WPF.DispatchInterface.DispatchMain"
         mc:Ignorable="d"
-        Title="Fuel Rats RatSpatcher" Height="600" Width="800" MinWidth="800" MinHeight="600" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded" Background="Black" OverridesDefaultStyle="True" >
-        <Window.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.MergedDictionaries>
-                    <ResourceDictionary Source="ScrollbarStyle.xaml" />
-                </ResourceDictionary.MergedDictionaries>
-            </ResourceDictionary>
-        </Window.Resources>
-        <Grid>
-            <Grid.ColumnDefinitions>
+        Title="Fuel Rats RatSpatcher" Height="600" Width="800" MinWidth="800" MinHeight="600" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded" Background="Black" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ScrollbarStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="400" />
             </Grid.ColumnDefinitions>
@@ -26,15 +27,13 @@
                         <RowDefinition Height="226" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="26" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Foreground="{StaticResource brushEliteOrange}" Content="Rescues"/>
-                        <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,10">
-                            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="500"/>
-                        </ScrollViewer>
-                        <Border Grid.Row="1" BorderBrush="{DynamicResource brushEliteBrightOrange}" BorderThickness="0,2,0,0" VerticalAlignment="bottom" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="26" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Foreground="{StaticResource brushEliteOrange}" Content="Rescues"/>
+                    <comp:Rescues Grid.Row="1" />
+                    <Border Grid.Row="1" BorderBrush="{DynamicResource brushEliteBrightOrange}" BorderThickness="0,2,0,0" VerticalAlignment="bottom" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.RowDefinitions>
@@ -48,9 +47,9 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid Grid.Column="1"  Margin="0,10,10,10" >
-                <Border BorderBrush="{DynamicResource brushEliteBrightOrange}" BorderThickness="2,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left" SnapsToDevicePixels="True" />
-                <Grid Margin="10,0,0,0"/>
-            </Grid>
+        <Grid Grid.Column="1"  Margin="0,10,10,10" >
+            <Border BorderBrush="{DynamicResource brushEliteBrightOrange}" BorderThickness="2,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left" SnapsToDevicePixels="True" />
+            <Grid Margin="10,0,0,0"/>
         </Grid>
+    </Grid>
 </Window>

@@ -37,16 +37,8 @@ namespace RatTracker_WPF.DispatchInterface
 		{
 		}
 
-		private async void Window_Loaded(object sender, RoutedEventArgs e)
+		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			List<KeyValuePair<string, string>> logindata = new List<KeyValuePair<string, string>>();
-			logindata.Add(new KeyValuePair<string, string>("email", m_UN));
-			logindata.Add(new KeyValuePair<string, string>("password", m_PW));
-
-			m_ApiWorker = new APIWorker();
-			object o = await m_ApiWorker.sendAPI("login", logindata);
-
-			Models.Api.Rat r = JsonConvert.DeserializeObject<Models.Api.Rat>(o.ToString());
 		}
 	}
 }

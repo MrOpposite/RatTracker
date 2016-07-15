@@ -179,6 +179,9 @@
     <Compile Include="Converter\BooleanToColourConverter.cs" />
     <Compile Include="Converter\EmptyStringToVisibilityConverter.cs" />
     <Compile Include="Converter\RequestStateToColourConverter.cs" />
+    <Compile Include="DispatchInterface\Components\Rescues.xaml.cs">
+      <DependentUpon>Rescues.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DispatchInterface\DispatchMain.xaml.cs">
       <DependentUpon>DispatchMain.xaml</DependentUpon>
     </Compile>
@@ -233,6 +236,10 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Page Include="DispatchInterface\Components\Rescues.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DispatchInterface\DispatchMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -240,6 +247,10 @@
     <Page Include="DispatchInterface\DispatchStatus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DispatchInterface\ScrollbarStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ErrorReporter.xaml">
       <SubType>Designer</SubType>

@@ -192,7 +192,7 @@ namespace RatTracker_WPF
 		}
 		private async void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			DoInitialize();
+			//DoInitialize();
 		}
 		public void DoInitialize()
 		{
