@@ -5,6 +5,8 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+        <SolidColorBrush x:Key="brushEliteRed" Color="#FFCE050F" />
+        <SolidColorBrush x:Key="brushEliteBrightOrange" Color="#FFFFBD32" />
         <SolidColorBrush x:Key="brushEliteOrange" Color="#FFFF7100"/>
         <SolidColorBrush x:Key="brushEliteGreen" Color="#FF029E4C"/>
         <SolidColorBrush x:Key="brushEliteBlue" Color="#FF00B3F7"/>

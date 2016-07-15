@@ -71,7 +71,9 @@ namespace RatTracker_WPF
 		Datum myrescue; // TODO: See myClient - must be refactored.
 		private ICollection<TravelLog> myTravelLog; // Log of recently visited systems.
 		private Overlay overlay; // Pointer to UI overlay
-		RootObject rescues; // Current rescues. Source for items in rescues datagrid
+        private DispatchInterface.DispatchMain dispatchInterface;
+
+        RootObject rescues; // Current rescues. Source for items in rescues datagrid
 		private string scState; // Supercruise state.
 		public bool stopNetLog; // Used to terminate netlog reader thread.
 		private TelemetryClient tc = new TelemetryClient(); 
@@ -1760,11 +1762,19 @@ namespace RatTracker_WPF
 				return 0;
 			return 1;
 		}
-		private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+		private void DispatchMenu_Click(object sender, RoutedEventArgs e)
 		{
-			//open the dispatch interface
-			DispatchInterface.DispatchMain dlg = new DispatchInterface.DispatchMain();
-			dlg.Show();
+            //open the dispatch interface
+            if (dispatchInterface == null || !dispatchInterface.IsLoaded)
+            {
+                dispatchInterface = new DispatchInterface.DispatchMain();
+                dispatchInterface.Show();
+            } else {
+                if (dispatchInterface.WindowState != WindowState.Minimized)
+                    dispatchInterface.Close();
+                else
+                    dispatchInterface.WindowState = WindowState.Normal;
+            }
 		}
 
 		private void OverlayMenu_Click(object sender, RoutedEventArgs e)
@@ -1812,7 +1822,7 @@ namespace RatTracker_WPF
 				}
 			}
 			else {
-				overlay.Close();
+                overlay.Close();
 			}
 		}
 
