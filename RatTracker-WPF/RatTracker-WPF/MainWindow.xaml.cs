@@ -1768,6 +1768,7 @@ namespace RatTracker_WPF
 			if (dispatchInterface == null || !dispatchInterface.IsLoaded)
 			{
 				dispatchInterface = new DispatchInterface.DispatchMain();
+				dispatchInterface.Focusable = false;
 				dispatchInterface.Show();
 			} else {
 				if (dispatchInterface.WindowState != WindowState.Minimized)

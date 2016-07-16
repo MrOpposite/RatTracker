@@ -49,6 +49,34 @@ namespace RatTracker_WPF.DispatchInterface.Components
 
 		#endregion
 
+		#region TwoLines DP
+
+		public bool TwoLines
+		{
+			get { return (bool)GetValue(TwoLinesProperty); }
+			set { SetValue(TwoLinesProperty, value); }
+		}
+
+		public static readonly DependencyProperty TwoLinesProperty =
+			DependencyProperty.Register("TwoLines", typeof(bool),
+				typeof(LabelWithValue), new PropertyMetadata(false));
+
+		#endregion
+
+
+		public string SecondRow
+		{
+			get { return TwoLines ? "*" : "0"; }
+		}
+
+		public string TextRow
+		{
+			get { return TwoLines ? "1" : "0"; }
+		}
+		public string TextCol
+		{
+			get { return TwoLines ? "0" : "1"; }
+		}
 
 		public LabelWithValue()
 		{

@@ -1,5 +1,4 @@
-﻿using RatTracker_WPF.DispatchInterface.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,11 +26,15 @@ namespace RatTracker_WPF.DispatchInterface.Components
 			get; set;
 		}
 
+		public string StarSystem
+		{
+			get; set;
+		}
+
 		public RescueItem()
 		{
 
 			InitializeComponent();
-			DataContext = this;
 		}
 	}
 }

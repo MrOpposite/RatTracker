@@ -194,7 +194,6 @@
     <Compile Include="DispatchInterface\DispatchStatus.xaml.cs">
       <DependentUpon>DispatchStatus.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DispatchInterface\Models\RescueListItemModel.cs" />
     <Compile Include="EDDBData.cs" />
     <Compile Include="ErrorReporter.xaml.cs">
       <DependentUpon>ErrorReporter.xaml</DependentUpon>

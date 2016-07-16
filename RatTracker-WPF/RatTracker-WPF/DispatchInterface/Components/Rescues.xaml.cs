@@ -25,6 +25,7 @@ namespace RatTracker_WPF.DispatchInterface.Components
             InitializeComponent();
 			RescueItem _rescueItem = new RescueItem();
 			_rescueItem.Client = "teeest";
+			_rescueItem.StarSystem = "Sol";
 			RescueList.Children.Add(_rescueItem);
 			_rescueItem = new RescueItem();
 			_rescueItem.Client = "taaast";

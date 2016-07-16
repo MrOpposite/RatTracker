@@ -5,14 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RatTracker_WPF.DispatchInterface.Components"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="300" Background="{Binding Path=Background}" Foreground="White">
+             d:DesignHeight="100" d:DesignWidth="300" Background="{Binding Background, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" Foreground="White">
 	<Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource brushEliteBlue}">
-		<UniformGrid HorizontalAlignment="Stretch" Height="auto">
-			<local:LabelWithValue Label="Client" Text="{Binding Client}" />
-			<local:LabelWithValue Label="Client" Text="{Binding Client}" />
-			<local:LabelWithValue Label="Client" Text="{Binding Client}" />
-			<local:LabelWithValue Label="Client" Text="{Binding Client}" />
-			<local:LabelWithValue Label="Client" Text="{Binding Client}" />
-		</UniformGrid>
+		<Grid HorizontalAlignment="Stretch">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="150"/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<local:LabelWithValue Grid.Row="0" Label="Client" FontSize="12" Text="{Binding Client, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" TwoLines="True" />
+			<local:LabelWithValue Grid.Row="1" Label="System" FontSize="12" Text="{Binding StarSystem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" TwoLines="True" />
+			<Grid Grid.Column="1" Grid.RowSpan="2">
+			</Grid>
+		</Grid>
 	</Border>
 </UserControl>
