@@ -1776,7 +1776,7 @@ namespace RatTracker_WPF
 			//open the dispatch interface
 			if (dispatchInterface == null || !dispatchInterface.IsLoaded)
 			{
-				dispatchInterface = new DispatchInterface.DispatchMain();
+				dispatchInterface = new DispatchInterface.DispatchMain(this);
 				dispatchInterface.Focusable = false;
 				dispatchInterface.Show();
 			} else {

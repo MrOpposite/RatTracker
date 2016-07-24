@@ -23,9 +23,15 @@ namespace RatTracker_WPF.DispatchInterface
 	public partial class DispatchMain : Window
 	{
 
-		public DispatchMain()
+		private MainWindow mainWindow;
+		public MainWindow MainWindow
+		{
+			get { return mainWindow; }
+		}
+		public DispatchMain(MainWindow mainWindow)
 		{
 			InitializeComponent();
+			this.mainWindow = mainWindow;
 		}
 
 		private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
