@@ -1885,7 +1885,7 @@ namespace RatTracker_WPF
 			if (MyClient != null && MyClient.Rescue != null)
 			{
 				frmsg.action = "FriendRequest:update";
-				frmsg.data.Add("ratID", MyPlayer.RatID.FirstOrDefault());
+				frmsg.data.Add("RatID", MyPlayer.RatID.FirstOrDefault());
 				frmsg.data.Add("RescueID", MyClient.Rescue._id);
 			}
 			switch (ratState.FriendRequest)
@@ -1919,7 +1919,7 @@ namespace RatTracker_WPF
 			if (MyClient != null && MyClient.Rescue != null)
 			{
 				frmsg.action = "WingRequest:update";
-				frmsg.data.Add("ratID", MyPlayer.RatID.FirstOrDefault());
+				frmsg.data.Add("RatID", MyPlayer.RatID.FirstOrDefault());
 				frmsg.data.Add("RescueID", MyClient.Rescue._id);
 			}
 			switch (ratState.WingRequest)
@@ -1954,7 +1954,7 @@ namespace RatTracker_WPF
 			if (MyClient != null && MyClient.Rescue != null)
 			{
 				frmsg.action = "SysArrived:update";
-				frmsg.data.Add("ratID", MyPlayer.RatID.FirstOrDefault());
+				frmsg.data.Add("RatID", MyPlayer.RatID.FirstOrDefault());
 				frmsg.data.Add("RescueID", MyClient.Rescue._id);
 			}
 			if (ratState.InSystem==false)
@@ -1981,7 +1981,7 @@ namespace RatTracker_WPF
 			if (MyClient != null && MyClient.Rescue != null)
 			{
 				frmsg.action = "BeaconSpotted:update";
-				frmsg.data.Add("ratID", MyPlayer.RatID.FirstOrDefault());
+				frmsg.data.Add("RatID", MyPlayer.RatID.FirstOrDefault());
 				frmsg.data.Add("RescueID", MyClient.Rescue._id);
 			}
 			if (ratState.Beacon==false)
@@ -2008,7 +2008,7 @@ namespace RatTracker_WPF
 			if (MyClient != null && MyClient.Rescue != null)
 			{
 				frmsg.action = "InstanceSuccessful:update";
-				frmsg.data.Add("ratID", MyPlayer.RatID.FirstOrDefault());
+				frmsg.data.Add("RatID", MyPlayer.RatID.FirstOrDefault());
 				frmsg.data.Add("RescueID", MyClient.Rescue._id);
 			}
 			if (ratState.InInstance==false)
@@ -2054,7 +2054,7 @@ namespace RatTracker_WPF
 		{
 			TPAMessage fuelmsg = new TPAMessage();
 			fuelmsg.action = "Fueled:update";
-			fuelmsg.data.Add("ratID", MyPlayer.RatID.FirstOrDefault());
+			fuelmsg.data.Add("RatID", MyPlayer.RatID.FirstOrDefault());
 			fuelmsg.data.Add("RescueID", MyClient.Rescue._id);
 
 			if (Equals(FueledButton.Background, Brushes.Red))
