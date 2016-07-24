@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RatTracker_WPF.Models.Api;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,23 +19,32 @@ namespace RatTracker_WPF.DispatchInterface.Components
 	/// <summary>
 	/// Interaction logic for UserControl1.xaml
 	/// </summary>
+
 	public partial class RescueItem : UserControl
 	{
 
+		public Rescue rescue;
+
 		public string Client
 		{
-			get; set;
+			get
+			{
+				return "test";//||rescue.CmdrName;
+			}
 		}
 
 		public string StarSystem
 		{
-			get; set;
+			get
+			{
+				return "test";// rescue.System;
+			}
 		}
 
-		public RescueItem()
+		public RescueItem(Rescue rescue)
 		{
-
 			InitializeComponent();
+			this.rescue = rescue;
 		}
 	}
 }

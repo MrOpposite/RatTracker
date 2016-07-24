@@ -22,10 +22,10 @@ namespace RatTracker_WPF.DispatchInterface
 	/// </summary>
 	public partial class DispatchMain : Window
 	{
+
 		public DispatchMain()
 		{
 			InitializeComponent();
-
 		}
 
 		private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -70,7 +70,6 @@ namespace RatTracker_WPF.DispatchInterface
 
 		private const int GWL_EXSTYLE = -20;
 		private const int WS_EX_NOACTIVATE = 0x08000000;
-
 
 		[DllImport("user32.dll")]
 		public static extern IntPtr SetWindowLong(IntPtr hWnd,

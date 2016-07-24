@@ -69,13 +69,24 @@ namespace RatTracker_WPF.DispatchInterface.Components
 			get { return TwoLines ? "*" : "0"; }
 		}
 
+		public string ThirdColumn
+		{
+			get { return TwoLines ? "auto" : "*"; }
+		}
+
 		public string TextRow
 		{
 			get { return TwoLines ? "1" : "0"; }
 		}
+
 		public string TextCol
 		{
-			get { return TwoLines ? "0" : "1"; }
+			get { return TwoLines ? "0" : "2"; }
+		}
+
+		public string TextColSpan
+		{
+			get { return TwoLines ? "3" : "1"; }
 		}
 
 		public LabelWithValue()

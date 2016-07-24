@@ -13,12 +13,35 @@
 				<RowDefinition/>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="150"/>
+				<ColumnDefinition Width="100"/>
 				<ColumnDefinition/>
 			</Grid.ColumnDefinitions>
 			<local:LabelWithValue Grid.Row="0" Label="Client" FontSize="12" Text="{Binding Client, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" TwoLines="True" />
 			<local:LabelWithValue Grid.Row="1" Label="System" FontSize="12" Text="{Binding StarSystem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" TwoLines="True" />
 			<Grid Grid.Column="1" Grid.RowSpan="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="2*"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid.Resources>
+					<Style x:Key="centerInGrid" TargetType="FrameworkElement">
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="HorizontalAlignment" Value="Center" />
+					</Style>
+					<Style BasedOn="{StaticResource centerInGrid}" TargetType="local:LabelWithValue" />
+					<Style BasedOn="{StaticResource centerInGrid}" TargetType="TextBlock" />
+				</Grid.Resources>
+				<local:LabelWithValue HorizontalAlignment="Stretch" Margin="3 0" Grid.Row="0" Grid.Column="1" Label="FR" Text="{Binding FrText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" />
+				<local:LabelWithValue HorizontalAlignment="Stretch" Margin="3 0" Grid.Row="1" Grid.Column="1" Label="WR" Text="{Binding WrText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" />
+				<local:LabelWithValue HorizontalAlignment="Stretch" Margin="3 0" Grid.Row="2" Grid.Column="1" Label="BC" Text="{Binding BcText, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:RescueItem}}}" />
+				<TextBlock Grid.Row="3" Grid.Column="1" Text="CR" />
+				<TextBlock Grid.Row="0" Grid.Column="0" Text="Assigned Rats" />
 			</Grid>
 		</Grid>
 	</Border>

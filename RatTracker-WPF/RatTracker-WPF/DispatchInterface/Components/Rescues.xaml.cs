@@ -20,15 +20,18 @@ namespace RatTracker_WPF.DispatchInterface.Components
     /// </summary>
     public partial class Rescues : UserControl
     {
-        public Rescues()
+
+		private APIWorker apworker; // Provides connection to the API
+
+		public Rescues()
         {
             InitializeComponent();
-			RescueItem _rescueItem = new RescueItem();
-			_rescueItem.Client = "teeest";
-			_rescueItem.StarSystem = "Sol";
+			RescueItem _rescueItem = new RescueItem(null);
+			/*_rescueItem.Client = "teeest";
+			_rescueItem.StarSystem = "Sol";*/
 			RescueList.Children.Add(_rescueItem);
-			_rescueItem = new RescueItem();
-			_rescueItem.Client = "taaast";
+			_rescueItem = new RescueItem(null);
+			/*_rescueItem.Client = "taaast";*/
 			RescueList.Children.Add(_rescueItem);
 		}
     }

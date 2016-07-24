@@ -11,7 +11,7 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="auto" />
 			<ColumnDefinition Width="auto" />
-			<ColumnDefinition Width="auto" />
+			<ColumnDefinition Width="{Binding ThirdColumn, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition/>
@@ -19,6 +19,6 @@
 		</Grid.RowDefinitions>
 		<TextBlock Text="{Binding Label, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}"  />
 		<TextBlock Grid.Column="1" Text=": " />
-		<TextBlock Grid.Row="{Binding TextRow,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" Grid.Column="{Binding TextCol,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" Text="{Binding Text, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" />
+		<TextBlock Grid.Row="{Binding TextRow,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" Grid.Column="{Binding TextCol,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" Grid.ColumnSpan="{Binding TextColSpan,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" Text="{Binding Text, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:LabelWithValue}}}" />
 	</Grid>
 </UserControl>
